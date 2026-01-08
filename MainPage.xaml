@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TicTacToeMAUI.MainPage"
+    Title="Tic Tac Toe">
+
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <!-- Game Title -->
+        <Label
+            Text="Tic Tac Toe"
+            FontSize="32"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- Game Status -->
+        <Label
+            x:Name="StatusLabel"
+            Text="Player X's Turn"
+            FontSize="18"
+            HorizontalOptions="Center" />
+
+        <!-- Game Board -->
+        <Grid
+            x:Name="GameGrid"
+            RowSpacing="5"
+            ColumnSpacing="5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 0 -->
+            <Button x:Name="Btn0" Grid.Row="0" Grid.Column="0" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="0"/>
+            <Button x:Name="Btn1" Grid.Row="0" Grid.Column="1" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="1"/>
+            <Button x:Name="Btn2" Grid.Row="0" Grid.Column="2" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="2"/>
+
+            <!-- Row 1 -->
+            <Button x:Name="Btn3" Grid.Row="1" Grid.Column="0" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="3"/>
+            <Button x:Name="Btn4" Grid.Row="1" Grid.Column="1" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="4"/>
+            <Button x:Name="Btn5" Grid.Row="1" Grid.Column="2" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="5"/>
+
+            <!-- Row 2 -->
+            <Button x:Name="Btn6" Grid.Row="2" Grid.Column="0" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="6"/>
+            <Button x:Name="Btn7" Grid.Row="2" Grid.Column="1" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="7"/>
+            <Button x:Name="Btn8" Grid.Row="2" Grid.Column="2" FontSize="32"
+        Clicked="OnCellClicked" CommandParameter="8"/>
+
+
+        </Grid>
+
+        <!-- Restart Button -->
+        <Button
+            Text="Restart Game"
+            FontSize="18"
+            Clicked="OnRestartClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
